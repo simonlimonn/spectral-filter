@@ -77,6 +77,8 @@ def audio_callback(indata, outdata, frames, time_info, status):
         ########################
         # START YOUR CODE HERE #
         ########################
+        if freq > LOW_CUT and freq < HIGH_CUT:
+            X_filtered[f] = X[f]
 
         # Decide whether this frequency survives
 
